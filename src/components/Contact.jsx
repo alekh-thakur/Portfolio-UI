@@ -29,7 +29,7 @@ const Contact = ({ dark }) => {
     const isEmailValid = emailValidation();
     if(isEmailValid){
       try{
-        const res = await axios.post("http://localhost:8080/contact",formdata)
+        const res = await axios.post("https://portfolio-backend-production-e4a1.up.railway.app/contact",formdata)
         alert("Submitted. Alekh will be in touch with you soon")
         setFormData({
           name:"",
