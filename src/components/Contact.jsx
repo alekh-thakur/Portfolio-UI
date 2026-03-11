@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { RiSendPlaneFill } from "react-icons/ri";
+import emailjs from "@emailjs/browser";
 
 const Contact = ({ dark }) => {
   const [emailError, setEmailerror] = useState("");
@@ -27,20 +28,28 @@ const Contact = ({ dark }) => {
   const handleSubmit = async (e) =>{
     e.preventDefault();
     const isEmailValid = emailValidation();
-    if(isEmailValid){
-      try{
-        const res = await axios.post("https://portfolio-backend-production-e4a1.up.railway.app/contact",formdata)
-        alert("Submitted. Alekh will be in touch with you soon")
+    if (isEmailValid) {
+    emailjs
+      .send(
+        "service_ux0czhv",
+        "template_7kzkimk",
+        formdata,
+        "vy9JL-09yyzrCWmKK"
+      )
+      .then(() => {
+        alert("Message sent successfully");
+
         setFormData({
-          name:"",
-          email:"",
-          message:""
-        })
-      }catch(err){
-         console.log("AXIOS ERROR:", err); 
-        alert("Information failed to send, Please try again!")
-      }
-    }
+          name: "",
+          email: "",
+          message: ""
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Failed to send message");
+      });
+  }
   }
   return (
     <section id="contact" className="flex flex-col pb-20 w-full">
