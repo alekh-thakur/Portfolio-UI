@@ -20,7 +20,7 @@ function App() {
   },[])
   
   return (
-   <div className={`scroll-smooth w-screen min-h-svh overflow-x-hidden ${dark ? "bg-black text-white" : "bg-white text-black"} transition-colors duration-500`}>
+   <div className={`scroll-smooth w-screen min-h-dvh overflow-x-hidden ${dark ? "bg-black text-white" : "bg-white text-black"} transition-colors duration-500`}>
             <Navbar dark={dark} setDark={setDark}/>            
             <Landing dark={dark}/>
             <About dark={dark}/>
