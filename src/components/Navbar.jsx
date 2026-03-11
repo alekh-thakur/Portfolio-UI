@@ -54,9 +54,9 @@ const Navbar = ({ dark, setDark }) => {
 
   return (
     <div
-      className={`flex justify-between items-center mt-5 fixed top-0 left-0 w-full ${
+      className={`flex justify-between items-center fixed top-0 left-0 w-full ${
         dark ? "bg-black text-white" : "bg-white text-black"
-      } z-50 px-6 md:px-10 pb-3 shadow-md`}
+      } z-50 px-6 md:px-10 h-16 shadow-md`}
     >
       
       <h1 className="text-2xl  md:text-3xl font-bold text-purple-700">
@@ -84,7 +84,7 @@ const Navbar = ({ dark, setDark }) => {
 
     
       <div
-        className="md:hidden text-2xl cursor-pointer"
+        className="md:hidden text-2xl cursor-pointer flex items-center"
         onClick={() => setOpen(!open)}
       >
         {open ? <RiCloseLine /> : <RiMenuLine />}
