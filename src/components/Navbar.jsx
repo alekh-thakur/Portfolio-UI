@@ -69,14 +69,14 @@ const Navbar = ({ dark, setDark }) => {
           {dark ? <RiSunFill /> : <RiMoonFill />}
         </button>
 
-        {["home","about","skills","projects","contact"].map((item) => (
+        {["Home","About","Skills","Projects","Contact"].map((item) => (
           <li key={item}>
             <a
               href={`#${item}`}
               className={navStyle(item)}
               onClick={() => handleNavClick(item)}
             >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
+              {item}
             </a>
           </li>
         ))}
@@ -104,14 +104,14 @@ const Navbar = ({ dark, setDark }) => {
           {dark ? <RiSunFill /> : <RiMoonFill />}
         </button>
 
-        {["home","about","skills","projects","contact"].map((item) => (
+        {["Home","About","Skills","Projects","Contact"].map((item) => (
           <a
             key={item}
             href={`#${item}`}
             className={navStyle(item)}
             onClick={() => handleNavClick(item)}
           >
-            {item.charAt(0).toUpperCase() + item.slice(1)}
+            {item}
           </a>
         ))}
       </div>
