@@ -31,8 +31,8 @@ const Footer = ({ dark }) => {
           <p>{date} | Developed by Alekh </p>
         </div>
         <div className="flex gap-3 pb-4 mt-5">
-          {socialLinks.map(({ icon, href, target }) => (
-            <a className={btnClass} href={href} target={target}>
+          {socialLinks.map(({ icon, href, target },index) => (
+            <a key={index} className={btnClass} href={href} target={target}>
               {icon}
             </a>
           ))}

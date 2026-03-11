@@ -6,6 +6,7 @@ const Projects = ({dark}) =>{
     const techStack = ["React","Tailwind","Spring","AI","MongoDB"];
     const projectOverview = [
         {
+            id:1,
             head:"Aagman - Hospital Management App",
             img:aagman,
             desc:"Aagman is an AI-powered hospital queue management system that enables patients to search doctors, book appointments, and reduce waiting time efficiently.",
@@ -15,6 +16,7 @@ const Projects = ({dark}) =>{
             overlay:"Work in progress"
         },
         {
+            id:2,
             head:"CareerTrack - Job Application Tracker App",
             img: job,
             desc:"Job Application Tracker is a web application that helps users organize and monitor their job applications in one place.",
@@ -37,8 +39,8 @@ const Projects = ({dark}) =>{
             </div>
             <div className="grid grid-rows-1 lg:grid lg:grid-cols-2 md:grid md:grid-cols-2 mt-10 mx-7" data-aos = "fade-up" data-aos-duration = "1000" >
                 {
-                    projectOverview.map(({head,img,desc,github,live,href,overlay})=>(
-                        <div key={head} className={`mx-7 mt-10  px-10 py-5 rounded-xl  ${dark ? "bg-[#2f3034e2]" : "bg-[#c2d7f6]"}`}>
+                    projectOverview.map(({id,head,img,desc,github,live,href,overlay})=>(
+                        <div key={id} className={`w-full mt-10  px-10 py-5 rounded-xl  ${dark ? "bg-[#2f3034e2]" : "bg-[#c2d7f6]"}`}>
                             <h1 className="font-bold text-xl mt-3">{head}</h1>
                             <div className="mt-3 relative group overflow-hidden ">
                                 <img src={img} className="w-100 rounded-xl " alt="" />
@@ -54,7 +56,7 @@ const Projects = ({dark}) =>{
                             <div className="mt-4 flex flex-wrap gap-3 ">
                                 {
                                     techStack.map((item)=>(
-                                        <p key={head} className={`${dark ? "bg-[#4f4b4b9b]" : "bg-[#92b9fb]"} py-1 px-4 rounded-2xl text-center`} >
+                                        <p key={item} className={`${dark ? "bg-[#4f4b4b9b]" : "bg-[#92b9fb]"} py-1 px-4 rounded-2xl text-center`} >
                                             {item}
                                         </p>
                                     ))
