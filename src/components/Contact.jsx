@@ -37,6 +37,7 @@ const Contact = ({ dark }) => {
           message:""
         })
       }catch(err){
+         console.log("AXIOS ERROR:", err); 
         alert("Information failed to send, Please try again!")
       }
     }
