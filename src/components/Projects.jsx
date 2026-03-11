@@ -44,7 +44,7 @@ const Projects = ({dark}) =>{
                             <h1 className="font-bold text-xl mt-3">{head}</h1>
                             <div className="mt-3 relative group overflow-hidden ">
                                 <img src={img} className="w-100 rounded-xl " alt="" />
-                                <div className="absolute inset-0 w-100 bg-black/60 flex items-end opacity-0 group-hover:opacity-100 transition duration-500">
+                                <div className="absolute inset-0 w-100 bg-black/60 flex items-end opacity-100 rounded-xl transition duration-500">
                                     <p className="text-white text-lg md:text-xl font-bold text-center px-4">
                                         {overlay}
                                 </p>
