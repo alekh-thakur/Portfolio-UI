@@ -54,17 +54,17 @@ const Navbar = ({ dark, setDark }) => {
 
   return (
     <div
-      className={`flex justify-between items-center fixed top-0 left-0 w-full ${
+      className={`flex justify-between items-center mt-5 fixed top-0 left-0 w-full ${
         dark ? "bg-black text-white" : "bg-white text-black"
       } z-50 px-6 md:px-10 pb-3 shadow-md`}
     >
       
-      <h1 className="text-2xl mt-5 md:text-3xl font-bold text-purple-700">
+      <h1 className="text-2xl  md:text-3xl font-bold text-purple-700">
         Alekh.
       </h1>
 
      
-      <ul className="hidden md:flex items-center gap-6 mt-5 text-sm mx-5">
+      <ul className="hidden md:flex items-center gap-6  text-sm mx-5">
         <button className="cursor-pointer" onClick={() => setDark(!dark)}>
           {dark ? <RiSunFill /> : <RiMoonFill />}
         </button>
