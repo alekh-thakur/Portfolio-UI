@@ -30,7 +30,7 @@ const Landing = ({dark}) => {
       <div>
         <div data-aos="zoom-in" data-aos-duration="1500" className="mt-18 md:mt-0">
           <img
-            className="flex justify-center h-80 w-80  object-cover rounded-[50%] shadow-[0_0_94px_0] shadow-purple-700"
+            className="flex justify-center md:h-80 md:w-80 h-60 w-60  object-cover rounded-[50%] shadow-[0_0_94px_0] shadow-purple-700"
             src={main}
             alt=""
           />

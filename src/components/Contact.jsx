@@ -61,8 +61,8 @@ const Contact = ({ dark }) => {
                 <label className="mb-2" htmlFor="name" >Name</label>
                 <input type="text" id="name" name="name" value={formdata.name} className={`${dark?"bg-[#000000ce]":"bg-white"} rounded-xl px-3 py-2 mb-4`} placeholder="Your name" onChange={handleData}/>
                 <label className="mb-2" htmlFor="email">E-mail</label>
-                <input type="email" value={formdata.email} className={`${dark?"bg-[#000000ce]":"bg-white"} rounded-xl px-3 py-2 mb-4`} name="email" id="email" placeholder="Your Email" onChange={handleData}/>
-                <span className="font-xs ml-6 text-red-500">{emailError}</span>
+                <input type="email" value={formdata.email} className={`${dark?"bg-[#000000ce]":"bg-white"} rounded-xl px-3 py-2 `} name="email" id="email" placeholder="Your Email" onChange={handleData}/>
+                <span className="text-[12px] ml-1 mb-3  text-red-500">{emailError}</span>
                 <label className="mb-2" htmlFor="message">Message</label>
                 <textarea name="message" value={formdata.message}  className={`${dark?"bg-[#000000ce]":"bg-white"} rounded-xl px-3 py-2 mb-4`} id="message" placeholder="Your message..." onChange={handleData}></textarea>
                 <button type="submit" className=" cursor-pointer flex items-center justify-center bg-purple-700 hover:bg-purple-800 px-3 py-2 rounded-xl text-white  ">< RiSendPlaneFill className="mr-2"  />Send Message</button>
