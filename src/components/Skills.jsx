@@ -23,7 +23,7 @@ const Skills = ({dark}) => {
 
           <div className='mt-5 grid  gap-5  '>
             <div className='grid grid-cols-2 text-xs md:text-l md:grid-cols-2 lg:text-l lg:grid-cols-4 gap-3' >
-               {["HTML","CSS","JavaScript","React","Tailwind","SpringBoot","MongoDB","Java"].map((item)=>(
+               {["HTML","CSS","JavaScript","React","Tailwind","Node.js","MongoDB","Java"].map((item)=>(
                 <p key={item} className='bg-purple-700/10 border-2 w-full h-12 border-purple-700 rounded-2xl p-3 flex items-center justify-center text-center'>
                   {item}
                 </p>
