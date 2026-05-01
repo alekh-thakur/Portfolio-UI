@@ -3,7 +3,7 @@ import aagman from "../assets/aagman.png";
 import job from "../assets/job.png";
 const Projects = ({dark}) =>{
     
-    const techStack = ["React","Tailwind","Spring","AI","MongoDB"];
+    const techStack = ["React","Tailwind","Node.js","AI","MongoDB"];
     const projectOverview = [
         {
             id:1,
